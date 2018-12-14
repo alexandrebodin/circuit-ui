@@ -26,6 +26,9 @@ const selectBaseStyles = ({ theme }) => css`
   position: relative;
   width: 100%;
   z-index: ${theme.zIndex.select};
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   ${textMega({ theme })};
 
   &:focus,
@@ -126,7 +129,11 @@ const Select = ({
 }) => (
   <SelectContainer {...{ noMargin, inline, disabled }}>
     <SelectElement {...{ ...props, value, disabled }}>
-      {!value && <option key="placeholder">{placeholder}</option>}
+      {!value && (
+        <option key="placeholder" value="">
+          {placeholder}
+        </option>
+      )}
       {children ||
         (options &&
           options.map(({ label, ...rest }) => (

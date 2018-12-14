@@ -27,6 +27,13 @@ describe('Table', () => {
       );
       expect(actual).toMatchSnapshot();
     });
+
+    it('should render a collapsed table', () => {
+      const actual = create(
+        <Table headers={headers} rows={items} borderCollapsed />
+      );
+      expect(actual).toMatchSnapshot();
+    });
   });
 
   describe('Accessibility tests', () => {
@@ -83,7 +90,7 @@ describe('Table', () => {
         wrapper.instance().onSortBy(index);
 
         expect(mock).toHaveBeenCalledWith(index, nextDirection, rows);
-        expect(wrapper.state('rows')).toEqual(expected);
+        expect(wrapper.instance().getSortedRows()).toEqual(expected);
       });
     });
   });
@@ -93,11 +100,9 @@ describe('Table', () => {
       const wrapper = shallow(<Table />);
       const index = 0;
       const nextDirection = ASCENDING;
-      const rows = [['a', 'b']];
 
-      wrapper.instance().updateSort(index, nextDirection, rows);
+      wrapper.instance().updateSort(index, nextDirection);
 
-      expect(wrapper.state('rows')).toEqual(rows);
       expect(wrapper.state('sortedRow')).toBe(index);
       expect(wrapper.state('sortDirection')).toBe(nextDirection);
     });

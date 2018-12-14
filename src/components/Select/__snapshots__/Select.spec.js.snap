@@ -16,6 +16,9 @@ exports[`Select should not render with invalid styles when also passed the disab
   position: relative;
   width: 100%;
   z-index: 20;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   line-height: 24px;
 }
@@ -54,7 +57,9 @@ exports[`Select should not render with invalid styles when also passed the disab
     disabled={true}
     value={null}
   >
-    <option>
+    <option
+      value=""
+    >
       Select an option
     </option>
     <option
@@ -102,6 +107,9 @@ exports[`Select should render with default styles 1`] = `
   position: relative;
   width: 100%;
   z-index: 20;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   line-height: 24px;
 }
@@ -130,7 +138,9 @@ exports[`Select should render with default styles 1`] = `
     disabled={false}
     value={null}
   >
-    <option>
+    <option
+      value=""
+    >
       Select an option
     </option>
     <option
@@ -171,6 +181,9 @@ exports[`Select should render with disabled styles when passed the disabled prop
   position: relative;
   width: 100%;
   z-index: 20;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   line-height: 24px;
 }
@@ -209,7 +222,9 @@ exports[`Select should render with disabled styles when passed the disabled prop
     disabled={true}
     value={null}
   >
-    <option>
+    <option
+      value=""
+    >
       Select an option
     </option>
     <option
@@ -250,6 +265,9 @@ exports[`Select should render with inline styles when passed the inline prop 1`]
   position: relative;
   width: 100%;
   z-index: 20;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   line-height: 24px;
 }
@@ -287,7 +305,9 @@ exports[`Select should render with inline styles when passed the inline prop 1`]
     disabled={false}
     value={null}
   >
-    <option>
+    <option
+      value=""
+    >
       Select an option
     </option>
     <option
@@ -335,6 +355,9 @@ exports[`Select should render with invalid styles when passed the invalid prop 1
   position: relative;
   width: 100%;
   z-index: 20;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   line-height: 24px;
   border-color: #FFAF9F;
@@ -364,7 +387,9 @@ exports[`Select should render with invalid styles when passed the invalid prop 1
     disabled={false}
     value={null}
   >
-    <option>
+    <option
+      value=""
+    >
       Select an option
     </option>
     <option
@@ -405,6 +430,9 @@ exports[`Select should render with no margin styles when passed the noMargin pro
   position: relative;
   width: 100%;
   z-index: 20;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 15px;
   line-height: 24px;
 }
@@ -441,7 +469,9 @@ exports[`Select should render with no margin styles when passed the noMargin pro
     disabled={false}
     value={null}
   >
-    <option>
+    <option
+      value=""
+    >
       Select an option
     </option>
     <option

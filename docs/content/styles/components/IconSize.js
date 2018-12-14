@@ -37,7 +37,7 @@ const IconSizeName = styled(Text)`
 `;
 
 const IconSize = ({ size }) => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <Wrapper>
       <Box size={size} />
       <div>

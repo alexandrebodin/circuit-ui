@@ -4,7 +4,7 @@ import Badge from '../../../../src/components/Badge';
 import { circuit } from '../../../../src/themes';
 
 const Stable = () => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <Badge color={Badge.SUCCESS} style={{ display: 'inline-block' }}>
       Stable
     </Badge>
@@ -12,7 +12,7 @@ const Stable = () => (
 );
 
 const Deprecated = () => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <Badge color={Badge.DANGER} style={{ display: 'inline-block' }}>
       Depcreated
     </Badge>
@@ -20,7 +20,7 @@ const Deprecated = () => (
 );
 
 const InReview = () => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <Badge color={Badge.WARNING} style={{ display: 'inline-block' }}>
       In review
     </Badge>

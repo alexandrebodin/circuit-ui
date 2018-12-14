@@ -17,6 +17,15 @@ import {
 
 import { normalizeAmount, isValidAmount } from './components/CurrencyInput';
 
+import { circuit } from './themes';
+
+export {
+  id as uniqueId,
+  numbers as numbersUtils,
+  currency as currencyUtils,
+  sharedPropTypes
+} from './util';
+
 const cardNumberUtils = {
   isValidCardNumber,
   isAcceptedCardScheme,
@@ -43,6 +52,7 @@ const currencyAmountUtils = {
 // Typography
 export { default as Heading } from './components/Heading';
 export { default as List } from './components/List';
+export { default as ListView } from './components/ListView';
 export { default as Markdown } from './components/Markdown';
 export { default as SubHeading } from './components/SubHeading';
 export { default as Text } from './components/Text';
@@ -60,6 +70,8 @@ export { default as CalendarTagTwoStep } from './components/CalendarTagTwoStep';
 export { default as Checkbox } from './components/Checkbox';
 export { default as Label } from './components/Label';
 export { default as Input } from './components/Input';
+export { default as MaskedInput } from './components/MaskedInput';
+export { default as RestrictedInput } from './components/RestrictedInput';
 export { default as RadioButton } from './components/RadioButton';
 export { default as RadioButtonGroup } from './components/RadioButtonGroup';
 export { default as SearchInput } from './components/SearchInput';
@@ -138,6 +150,7 @@ export { default as CardSchemes } from './components/CardSchemes';
 export {
   default as PaymentMethodIcon
 } from './components/CardSchemes/components/PaymentMethodIcon';
+
 export { default as SideNav } from './components/SideNav';
 export { Menu } from './components/SideNav/components';
 export { Drawer } from './components/SideNav/components';
@@ -145,3 +158,18 @@ export { Drawer } from './components/SideNav/components';
 // Helpers
 export { default as State } from './components/State';
 export { default as InlineElements } from './components/InlineElements';
+
+// Theme
+const standard = { ...circuit }; // otherwise this get exported as a `Module`
+const theme = {
+  standard,
+  circuit: standard
+};
+
+export { theme };
+
+export {
+  globalStyles as injectGlobalStyles,
+  styleHelpers,
+  constants as styleConstants
+} from './styles';
