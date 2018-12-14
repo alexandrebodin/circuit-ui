@@ -29,7 +29,7 @@ const PropTable = ({ component }) => {
 
   if (!parsed) {
     return (
-      <ThemeProvider theme={circuit}>
+      <ThemeProvider theme={{ ...circuit }}>
         <Text italic>
           Could not render prop table for {component.displayName}.
         </Text>
@@ -40,7 +40,7 @@ const PropTable = ({ component }) => {
   const { props, description } = parsed;
 
   return (
-    <ThemeProvider theme={circuit}>
+    <ThemeProvider theme={{ ...circuit }}>
       <TableWrapper>
         <Table
           headers={['Name', 'Type', 'Required', 'Default Value', 'Description']}

@@ -37,7 +37,7 @@ const BorderRadiusName = styled(Text)`
 `;
 
 const BorderRadius = ({ size }) => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <Wrapper>
       <Box size={size} />
       <div>

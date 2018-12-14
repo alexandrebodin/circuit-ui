@@ -24,7 +24,7 @@ const TableWrapper = withTheme(({ theme }) => (
 ));
 
 const MediaQueriesTable = () => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <TableWrapper />
   </ThemeProvider>
 );

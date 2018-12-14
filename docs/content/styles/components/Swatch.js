@@ -47,7 +47,7 @@ const ColorWrapper = styled('div')`
 `;
 
 const Swatch = ({ colorName }) => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <ColorWrapper>
       <Color colorName={colorName} />
       <ColorName>

@@ -37,7 +37,7 @@ const SpacingName = styled(Text)`
 `;
 
 const Spacing = ({ spacingName }) => (
-  <ThemeProvider theme={circuit}>
+  <ThemeProvider theme={{ ...circuit }}>
     <Wrapper>
       <Box spacingName={spacingName} />
       <div>
